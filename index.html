@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lene Ray Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-sm border-b border-cyan-500/30 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <img src="port/gig/logo.png" alt="Lene Ray Photography Logo" class="h-12 w-auto">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#gig" class="text-white hover:text-cyan-400 transition-colors">GIG PHOTOGRAPHY</a>
+                    <a href="#studio" class="text-white hover:text-cyan-400 transition-colors">STUDIO</a>
+                    <a href="#location" class="text-white hover:text-cyan-400 transition-colors">LOCATION</a>
+                    <a href="#about" class="text-white hover:text-cyan-400 transition-colors">ABOUT</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white hover:text-cyan-400 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobileMenu" class="md:hidden fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="mobile-menu-bg flex flex-col h-full">
+                <!-- Close Button -->
+                <div class="flex justify-end p-6">
+                    <button id="closeMobileMenu" class="text-white hover:text-cyan-400 transition-colors p-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Mobile Navigation Links -->
+                <nav class="flex flex-col items-center justify-center flex-1 space-y-12 px-8">
+                    <a href="#gig" class="mobile-nav-link text-white hover:text-cyan-400 transition-all duration-300 text-2xl font-bold tracking-wider">GIG PHOTOGRAPHY</a>
+                    <a href="#studio" class="mobile-nav-link text-white hover:text-magenta-400 transition-all duration-300 text-2xl font-bold tracking-wider">STUDIO</a>
+                    <a href="#location" class="mobile-nav-link text-white hover:text-purple-400 transition-all duration-300 text-2xl font-bold tracking-wider">LOCATION</a>
+                    <a href="#about" class="mobile-nav-link text-white hover:text-lime-400 transition-all duration-300 text-2xl font-bold tracking-wider">ABOUT</a>
+                </nav>
+                
+                <!-- Mobile Contact Info -->
+                <div class="text-center p-8 border-t border-cyan-500/30 bg-black/20">
+                    <p class="text-cyan-400 mb-3 font-semibold text-lg">Get In Touch</p>
+                    <p class="text-white mb-2 text-sm">lene@momentstomedia.com</p>
+                    <p class="text-white text-sm">07885 414104</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-12 md:py-20">
+        <div class="hero-section flex flex-wrap items-center justify-between">
+            <div class="hero-text w-full md:w-2/5 pr-0 md:pr-8 mb-8 md:mb-0">
+                <h2 class="neon-lime text-3xl md:text-5xl font-bold mb-4">CAPTURING THE ENERGY OF THE MOMENT</h2>
+                <p class="text-gray-300 mb-6 text-lg">Specializing in dynamic live music photography and creative studio portraits that tell your unique story.</p>
+                <a href="#gig" class="btn-cyan inline-block px-8 py-3 rounded-full font-bold">View Portfolio</a>
+            </div>
+            <div class="hero-image w-3/4 md:w-2/5 relative">
+                <div class="glass-panel p-4 relative neon-border-cyan">
+                    <img src="port/gig/wear.jpg" 
+                         alt="Dynamic live concert photography showcase" 
+                         class="w-full h-auto rounded">
+                    <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-70 p-4 rounded">
+                        <p class="text-white mb-2">Photographer & Visual Storyteller</p>
+                        <p class="text-gray-300 text-sm">Also available for commercial projects at <a href="https://www.momentstomedia.com" target="_blank" class="neon-cyan underline">Moments to Media</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gig/Live Concert Photography -->
+    <section id="gig" class="container mx-auto px-4 py-12 md:py-20">
+        <h2 class="neon-cyan text-3xl md:text-4xl font-bold mb-8 text-center">GIG / LIVE CONCERT PHOTOGRAPHY</h2>
+        <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Gallery Items -->
+                         <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                 <img src="port/gig/Screenshot_20250704_135437_Instagram.jpg" 
+                      alt="Live violin performance with dramatic lighting" 
+                      class="w-full h-64 object-cover cursor-pointer"
+                      onclick="openModal(this)">
+             </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="port/gig/DSC08207.jpg" 
+                     alt="Live concert photo 2" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="port/gig/DSC08172-3.jpg" 
+                     alt="Live concert photo 3" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="port/gig/DSC08080-3.jpg" 
+                     alt="Live concert photo 4" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="port/gig/DSC08065.jpg" 
+                     alt="Live concert photo 5" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="port/gig/DSC08042.jpg" 
+                     alt="Live concert photo 6" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="mailto:lene@momentstomedia.com?subject=Photography Inquiry - Gig Photography&body=Hello Lene, I would like to inquire about your gig photography services..." class="email-btn btn-cyan inline-block px-8 py-3 rounded-full font-bold text-decoration-none">
+                To find out more or to book a shoot click here
+            </a>
+            <div class="mt-4">
+                <a href="tel:07885414104" class="phone-btn btn-cyan inline-block px-6 py-2 rounded-full font-semibold text-decoration-none mr-2">
+                    📞 Call: 07885 414104
+                </a>
+                <a href="sms:07885414104?body=Hi Lene, I'm interested in your photography services..." class="sms-btn btn-cyan inline-block px-6 py-2 rounded-full font-semibold text-decoration-none">
+                    💬 Text: 07885 414104
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Photography -->
+    <section id="studio" class="container mx-auto px-4 py-12 md:py-20">
+        <h2 class="neon-magenta text-3xl md:text-4xl font-bold mb-8 text-center">STUDIO PHOTOGRAPHY</h2>
+        <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Gallery Items -->
+                         <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                 <img src="port/gig/Screenshot_20250704_135324_Instagram.jpg" 
+                      alt="Dramatic black & white studio portrait" 
+                      class="w-full h-64 object-cover cursor-pointer"
+                      onclick="openModal(this)">
+             </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="port/gig/DSC07749.jpg" 
+                     alt="Studio photo 2" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="port/gig/DSC07625.jpg" 
+                     alt="Studio photo 3" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="port/gig/DSC07528.jpg" 
+                     alt="Studio photo 4" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="port/gig/DSC07501.jpg" 
+                     alt="Studio photo 5" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="port/gig/DSC07427-2.jpg" 
+                     alt="Studio photo 6" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="mailto:lene@momentstomedia.com?subject=Photography Inquiry - Studio Photography&body=Hello Lene, I would like to inquire about your studio photography services..." class="email-btn btn-magenta inline-block px-8 py-3 rounded-full font-bold text-decoration-none">
+                To find out more or to book a shoot click here
+            </a>
+            <div class="mt-4">
+                <a href="tel:07885414104" class="phone-btn btn-magenta inline-block px-6 py-2 rounded-full font-semibold text-decoration-none mr-2">
+                    📞 Call: 07885 414104
+                </a>
+                <a href="sms:07885414104?body=Hi Lene, I'm interested in your studio photography services..." class="sms-btn btn-magenta inline-block px-6 py-2 rounded-full font-semibold text-decoration-none">
+                    💬 Text: 07885 414104
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Photography -->
+    <section id="location" class="container mx-auto px-4 py-12 md:py-20">
+        <h2 class="neon-purple text-3xl md:text-4xl font-bold mb-8 text-center">PHOTOSHOOTS ON LOCATION</h2>
+        <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Gallery Items -->
+            <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
+                <img src="port/gig/DSC04079.jpg" 
+                     alt="Location photo 1" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
+                <img src="port/gig/DSC03620.jpg" 
+                     alt="Location photo 2" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
+                <img src="port/gig/DSC03264.jpg" 
+                     alt="Location photo 3" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
+                <img src="port/gig/DSC03232.jpg" 
+                     alt="Location photo 4" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
+                <img src="port/gig/DSC02728.jpg" 
+                     alt="Location photo 5" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
+                <img src="port/gig/DSC02293-2.jpg" 
+                     alt="Location photo 6" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     onclick="openModal(this)">
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="mailto:lene@momentstomedia.com?subject=Photography Inquiry - Location Photography&body=Hello Lene, I would like to inquire about your location photography services..." class="email-btn btn-purple inline-block px-8 py-3 rounded-full font-bold text-decoration-none">
+                To find out more or to book a shoot click here
+            </a>
+            <div class="mt-4">
+                <a href="tel:07885414104" class="phone-btn btn-purple inline-block px-6 py-2 rounded-full font-semibold text-decoration-none mr-2">
+                    📞 Call: 07885 414104
+                </a>
+                <a href="sms:07885414104?body=Hi Lene, I'm interested in your location photography services..." class="sms-btn btn-purple inline-block px-6 py-2 rounded-full font-semibold text-decoration-none">
+                    💬 Text: 07885 414104
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-4 py-12 md:py-20">
+        <div class="glass-panel p-8 md:p-12 max-w-4xl mx-auto">
+            <h2 class="neon-lime text-3xl md:text-4xl font-bold mb-6">ABOUT LENE RAY</h2>
+            <div class="prose prose-invert max-w-none">
+                                 <p class="text-gray-300 mb-4">
+                    I'm Lene Ray, a professional photographer and videographer with over 8 years of experience capturing moments that matter. My love for photography began in childhood, always with a camera in hand, and eventually grew into a career that has taken me from local projects to national recognition.
+                 </p>
+                 <p class="text-gray-300 mb-4">
+                    Over the years, I've had the privilege of working on major campaigns for BID companies, with my films featured in cinemas, magazines, and the press. One of the music videos I directed even reached No.1 on the iTunes music video chart and was later featured on BBC News.
+                 </p>
+                 <p class="text-gray-300 mb-4">
+                    My portfolio includes collaborations with a wide range of musicians and bands, shooting everything from album covers to promotional posters. I've covered festivals and live shows for artists like Olly Murs, Happy Mondays, Gabrielle, Jools Holland, Scouting for Girls, and The Hoosiers. My reviews and photography are regularly published in The Bristol Gig Guide, and my work has also appeared in Festival Brides, Exeter Living, Devon Live, BBC, Brides, God Is in the TV Zine, and even across Stagecoach buses throughout the South West.
+                 <p class="text-gray-300 mb-4">
+                    I'm also passionate about using creativity for good. A recent artist collaboration raised over £500 for the mental health charity MIND.
+                 </p>
+                 <p class="text-gray-300 mb-4">
+                    Whether I'm working from my home studio, in professional spaces, or on location using natural light and creative props, I bring a relaxed and personal approach to every shoot. I also run<a href="https://www.momentstomedia.com" target="_blank" class="neon-cyan underline">Moments to Media</a>, my sister business focused on capturing weddings and turning them into timeless, heartfelt films.
+                 </p>
+                 <p class="text-gray-300 mb-4">
+                    At the core of everything I do is a deep love for storytelling. Whether through still images or moving visuals and a commitment to making people feel seen, celebrated, and connected.
+                 </p>
+            </div>
+        </div>
+    </section>
+
+         <!-- Footer -->
+     <footer class="glass-panel mt-20 py-12 border-t border-cyan-500/20">
+         <div class="container mx-auto px-4">
+             <!-- Main Footer Content -->
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                 <!-- Brand Section -->
+                 <div class="text-center md:text-left">
+                     <div class="flex justify-center md:justify-start mb-3">
+                         <img src="port/gig/logo.png" alt="Lene Ray Photography Logo" class="h-16 w-auto">
+                     </div>
+                     <h3 class="neon-cyan text-2xl font-bold mb-3">LENE RAY PHOTOGRAPHY</h3>
+                     <p class="text-gray-400 text-sm mb-4">Capturing moments that matter with passion and creativity</p>
+                     <div class="flex justify-center md:justify-start space-x-4">
+                         <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                         </a>
+                         <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/></svg>
+                         </a>
+                         <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                         </a>
+                     </div>
+                 </div>
+                 
+                 <!-- Quick Links -->
+                 <div class="text-center">
+                     <h4 class="neon-magenta text-lg font-semibold mb-4">QUICK LINKS</h4>
+                     <div class="space-y-2">
+                         <a href="#gig" class="block text-gray-400 hover:text-cyan-400 transition-colors duration-300">Live Concert Photography</a>
+                         <a href="#studio" class="block text-gray-400 hover:text-cyan-400 transition-colors duration-300">Studio Photography</a>
+                         <a href="#location" class="block text-gray-400 hover:text-cyan-400 transition-colors duration-300">Location Photography</a>
+                         <a href="#about" class="block text-gray-400 hover:text-cyan-400 transition-colors duration-300">About Me</a>
+                     </div>
+                 </div>
+                 
+                 <!-- Contact Info -->
+                 <div class="text-center md:text-right">
+                     <h4 class="neon-purple text-lg font-semibold mb-4">GET IN TOUCH</h4>
+                     <div class="space-y-3">
+                         <div class="flex items-center justify-center md:justify-end space-x-2">
+                             <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                             <a href="mailto:lene@momentstomedia.com" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">lene@momentstomedia.com</a>
+                         </div>
+                         <div class="flex items-center justify-center md:justify-end space-x-2">
+                             <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                             <span class="text-gray-300">07885 414104</span>
+                         </div>
+                         <div class="flex items-center justify-center md:justify-end space-x-2">
+                             <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                             <span class="text-gray-300">South West, UK</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             
+                           <!-- Bottom Bar -->
+              <div class="border-t border-gray-700 pt-6 text-center">
+                  <p class="text-gray-400 text-sm">© 2024 Lene Ray Photography. All Rights Reserved.</p>
+                  <p class="text-gray-500 text-xs mt-2">Also available for commercial projects at <a href="https://www.momentstomedia.com" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">Moments to Media</a></p>
+                  <p class="text-gray-500 text-xs mt-2">Built by <a href="https://thefreewebsitewizards.com/?fbclid=PAZXh0bgNhZW0CMTEAAad0Jm-GNlXnPPJ1LVG1DBVBoUGdRHC5m3FFwUqGHjUfujAnDPDhsINN8mAv1A_aem_owWh2qpkEErFPYCqV9cPEg" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">The Free Website Wizards</a></p>
+              </div>
+         </div>
+     </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

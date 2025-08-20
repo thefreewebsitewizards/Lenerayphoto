@@ -250,7 +250,7 @@ h1, h2, h3, h4 {
     transform: scale(1.05);
 }
 
-/* Mobile Menu Overlay Styles - No Sliding/Swiping */
+/* Mobile Menu Overlay Styles - Enable Touch */
 #mobileMenu {
     position: fixed;
     top: 0;
@@ -265,33 +265,96 @@ h1, h2, h3, h4 {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    /* Remove any transform properties */
     transform: none;
-}
-
-/* Show overlay when menu is open */
-#mobileMenu.menu-open {
-    opacity: 1;
-    visibility: visible;
-    transform: none; /* Ensure no transform */
-}
-
-/* Remove all translate classes and transforms */
-#mobileMenu.translate-x-full {
-    opacity: 0;
-    visibility: hidden;
-    transform: none; /* No sliding */
-}
-
-/* Disable any touch/swipe gestures */
-#mobileMenu {
-    touch-action: none;
-    -webkit-touch-callout: none;
+    /* Enable touch interactions */
+    touch-action: manipulation;
+    -webkit-touch-callout: default;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+/* Mobile navigation links - Touch enabled */
+.mobile-nav-link {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 3rem;
+    margin: 0.75rem 0;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    /* Enable touch */
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 240, 255, 0.3);
+}
+
+/* Touch feedback for mobile nav links */
+.mobile-nav-link:active {
+    transform: scale(0.98);
+    background: rgba(0, 240, 255, 0.2);
+}
+
+/* Hamburger and close button touch */
+#mobileMenuBtn, #closeMobileMenu {
+    filter: drop-shadow(0 0 4px var(--cyan));
+    transition: all 0.3s ease;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 240, 255, 0.3);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+#mobileMenuBtn:active, #closeMobileMenu:active {
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 8px var(--cyan));
+}
+
+#mobileMenuBtn:hover, #closeMobileMenu:hover {
+    filter: drop-shadow(0 0 8px var(--cyan));
+    transform: scale(1.1);
+}
+
+/* Close button positioning with better touch target */
+#closeMobileMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contact info touch targets */
+#mobileMenu .contact-info a {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 240, 255, 0.3);
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#mobileMenu .contact-info a:active {
+    transform: scale(0.98);
+    background: rgba(0, 240, 255, 0.1);
 }
 
 /* Mobile menu background - static overlay */
@@ -370,218 +433,6 @@ body.menu-open {
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 0.5px;
-}
-
-.mobile-nav-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent, 
-        rgba(0, 240, 255, 0.2), 
-        transparent);
-    transition: left 0.5s ease;
-}
-
-.mobile-nav-link:hover::before {
-    left: 100%;
-}
-
-.mobile-nav-link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: currentColor;
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
-    transform: translateY(-2px);
-}
-
-/* Mobile contact info at bottom */
-#mobileMenu .contact-info {
-    margin-top: auto;
-    padding: 20px;
-    border-top: 2px solid var(--cyan);
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    text-align: center;
-}
-
-#mobileMenu .contact-info p {
-    margin: 8px 0;
-    font-size: 1rem;
-}
-
-.mobile-nav-link {
-    position: relative;
-    overflow: hidden;
-    padding: 1rem 2rem;
-    border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
-}
-
-.mobile-nav-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent, 
-        rgba(0, 240, 255, 0.2), 
-        transparent);
-    transition: left 0.5s ease;
-}
-
-.mobile-nav-link:hover::before {
-    left: 100%;
-}
-
-.mobile-nav-link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: currentColor;
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
-    transform: translateY(-2px);
-}
-
-/* Mobile contact info at bottom */
-#mobileMenu .contact-info {
-    margin-top: auto;
-    padding: 20px;
-    border-top: 2px solid var(--cyan);
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    text-align: center;
-}
-
-#mobileMenu .contact-info p {
-    margin: 8px 0;
-    font-size: 1rem;
-}
-
-.mobile-nav-link {
-    position: relative;
-    overflow: hidden;
-    padding: 1rem 2rem;
-    border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
-}
-
-.mobile-nav-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent, 
-        rgba(0, 240, 255, 0.2), 
-        transparent);
-    transition: left 0.5s ease;
-}
-
-.mobile-nav-link:hover::before {
-    left: 100%;
-}
-
-.mobile-nav-link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: currentColor;
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
-    transform: translateY(-2px);
-}
-
-/* Mobile contact info at bottom */
-#mobileMenu .contact-info {
-    margin-top: auto;
-    padding: 20px;
-    border-top: 2px solid var(--cyan);
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    text-align: center;
-}
-
-#mobileMenu .contact-info p {
-    margin: 8px 0;
-    font-size: 1rem;
-}
-
-.mobile-nav-link {
-    position: relative;
-    overflow: hidden;
-    padding: 1rem 2rem;
-    border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
-}
-
-.mobile-nav-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent, 
-        rgba(0, 240, 255, 0.2), 
-        transparent);
-    transition: left 0.5s ease;
-}
-
-.mobile-nav-link:hover::before {
-    left: 100%;
-}
-
-.mobile-nav-link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: currentColor;
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
-    transform: translateY(-2px);
-}
-
-/* Mobile contact info at bottom */
-#mobileMenu .contact-info {
-    margin-top: auto;
-    padding: 20px;
-    border-top: 2px solid var(--cyan);
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    text-align: center;
-}
-
-#mobileMenu .contact-info p {
-    margin: 8px 0;
-    font-size: 1rem;
-}
-
-.mobile-nav-link {
-    position: relative;
-    overflow: hidden;
-    padding: 1rem 2rem;
-    border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
 }
 
 .mobile-nav-link::before {

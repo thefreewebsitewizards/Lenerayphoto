@@ -37,11 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollY = currentScrollY;
     });
     // Mobile menu functionality - No sliding/swiping
+    // Mobile menu functionality - Touch enabled
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMobileMenu = document.getElementById('closeMobileMenu');
     
-    // Open mobile menu as static overlay
+    // Open mobile menu - touch and click
     mobileMenuBtn.addEventListener('click', function() {
         mobileMenu.classList.add('menu-open');
         mobileMenu.classList.remove('translate-x-full');
@@ -49,7 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = 'hidden';
     });
     
-    // Close mobile menu overlay
+    // Touch support for hamburger button
+    mobileMenuBtn.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        mobileMenu.classList.add('menu-open');
+        mobileMenu.classList.remove('translate-x-full');
+        document.body.classList.add('menu-open');
+        document.body.style.overflow = 'hidden';
+    });
+    
+    // Close mobile menu - touch and click
     closeMobileMenu.addEventListener('click', function() {
         mobileMenu.classList.remove('menu-open');
         mobileMenu.classList.add('translate-x-full');
@@ -57,17 +67,61 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     });
     
-    // Close mobile menu when clicking on navigation links
+    // Touch support for close button
+    closeMobileMenu.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        mobileMenu.classList.remove('menu-open');
+        mobileMenu.classList.add('translate-x-full');
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
+    });
+    
+    // Navigation links - touch and click
     document.querySelectorAll('#mobileMenu nav a').forEach(link => {
-        link.addEventListener('click', function() {
+        // Click event
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = this.getAttribute('href');
+            
+            // Close menu
             mobileMenu.classList.remove('menu-open');
             mobileMenu.classList.add('translate-x-full');
             document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
+            
+            // Navigate to section
+            if (target && target.startsWith('#')) {
+                setTimeout(() => {
+                    document.querySelector(target)?.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }, 300);
+            }
+        });
+        
+        // Touch event
+        link.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            const target = this.getAttribute('href');
+            
+            // Close menu
+            mobileMenu.classList.remove('menu-open');
+            mobileMenu.classList.add('translate-x-full');
+            document.body.classList.remove('menu-open');
+            document.body.style.overflow = '';
+            
+            // Navigate to section
+            if (target && target.startsWith('#')) {
+                setTimeout(() => {
+                    document.querySelector(target)?.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }, 300);
+            }
         });
     });
     
-    // Close mobile menu when clicking on the overlay background
+    // Close mobile menu when tapping overlay background
     mobileMenu.addEventListener('click', function(e) {
         if (e.target === mobileMenu || e.target.classList.contains('mobile-menu-bg')) {
             mobileMenu.classList.remove('menu-open');
@@ -77,14 +131,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Disable swipe gestures on mobile menu
-    mobileMenu.addEventListener('touchstart', function(e) {
-        e.preventDefault();
-    }, { passive: false });
+    // Touch support for overlay background
+    mobileMenu.addEventListener('touchend', function(e) {
+        if (e.target === mobileMenu || e.target.classList.contains('mobile-menu-bg')) {
+            e.preventDefault();
+            mobileMenu.classList.remove('menu-open');
+            mobileMenu.classList.add('translate-x-full');
+            document.body.classList.remove('menu-open');
+            document.body.style.overflow = '';
+        }
+    });
     
-    mobileMenu.addEventListener('touchmove', function(e) {
-        e.preventDefault();
-    }, { passive: false });
+    // Remove the touch prevention code that was blocking interactions
+    // (Remove these lines if they exist)
+    // mobileMenu.addEventListener('touchstart', function(e) {
+    //     e.preventDefault();
+    // }, { passive: false });
+    // 
+    // mobileMenu.addEventListener('touchmove', function(e) {
+    //     e.preventDefault();
+    // }, { passive: false });
     
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

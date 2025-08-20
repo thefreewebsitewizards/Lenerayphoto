@@ -36,39 +36,56 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScrollY = currentScrollY;
     });
-    // Mobile menu functionality
+    // Mobile menu functionality - No sliding/swiping
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMobileMenu = document.getElementById('closeMobileMenu');
     
-    // Open mobile menu
+    // Open mobile menu as static overlay
     mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.add('menu-open');
         mobileMenu.classList.remove('translate-x-full');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.classList.add('menu-open');
+        document.body.style.overflow = 'hidden';
     });
     
-    // Close mobile menu
+    // Close mobile menu overlay
     closeMobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.remove('menu-open');
         mobileMenu.classList.add('translate-x-full');
-        document.body.style.overflow = ''; // Restore scrolling
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
     });
     
     // Close mobile menu when clicking on navigation links
     document.querySelectorAll('#mobileMenu nav a').forEach(link => {
         link.addEventListener('click', function() {
+            mobileMenu.classList.remove('menu-open');
             mobileMenu.classList.add('translate-x-full');
+            document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
         });
     });
     
-    // Close mobile menu when clicking outside
+    // Close mobile menu when clicking on the overlay background
     mobileMenu.addEventListener('click', function(e) {
-        if (e.target === mobileMenu) {
+        if (e.target === mobileMenu || e.target.classList.contains('mobile-menu-bg')) {
+            mobileMenu.classList.remove('menu-open');
             mobileMenu.classList.add('translate-x-full');
+            document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
         }
     });
-
+    
+    // Disable swipe gestures on mobile menu
+    mobileMenu.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+    
+    mobileMenu.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+    
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -78,26 +95,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Modal functionality
-    function openModal(img) {
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        modal.style.display = "block";
-        modalImg.src = img.src;
-    }
-
-    function closeModal() {
-        document.getElementById('imageModal').style.display = "none";
-    }
-
-    // Close modal when clicking outside the image
-    window.onclick = function(event) {
-        const modal = document.getElementById('imageModal');
-        if (event.target == modal) {
-            closeModal();
+            // Image modal functionality
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const closeBtn = document.getElementsByClassName("close")[0];
+        
+        // Get all gallery images
+        const galleryImages = document.querySelectorAll('.gallery-img img');
+        
+        // Add click event to each image
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+        
+        // Close modal when clicking X
+        closeBtn.onclick = function() { 
+            modal.style.display = "none";
         }
-    };
-
+        
+        // Close modal when clicking outside image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     // Enhanced link functionality for better user experience
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     const phoneLinks = document.querySelectorAll('a[href^="tel:"]');

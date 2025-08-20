@@ -20,9 +20,10 @@
                 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#gig" class="text-white hover:text-cyan-400 transition-colors">GIG PHOTOGRAPHY</a>
+                    <a href ="#home" class="text-white hover:text-cyan-400 transition-colors">HOME</a>
+                    <a href="#gig" class="text-white hover:text-cyan-400 transition-colors">GIG / LIVE CONCERT</a>
                     <a href="#studio" class="text-white hover:text-cyan-400 transition-colors">STUDIO</a>
-                    <a href="#location" class="text-white hover:text-cyan-400 transition-colors">LOCATION</a>
+                    <a href="#location" class="text-white hover:text-cyan-400 transition-colors">ON LOCATION</a>
                     <a href="#about" class="text-white hover:text-cyan-400 transition-colors">ABOUT</a>
                 </nav>
                 
@@ -48,15 +49,16 @@
                 </div>
                 
                 <!-- Mobile Navigation Links -->
-                <nav class="flex flex-col items-center justify-center flex-1 space-y-12 px-8">
-                    <a href="#gig" class="mobile-nav-link text-white hover:text-cyan-400 transition-all duration-300 text-2xl font-bold tracking-wider">GIG PHOTOGRAPHY</a>
-                    <a href="#studio" class="mobile-nav-link text-white hover:text-magenta-400 transition-all duration-300 text-2xl font-bold tracking-wider">STUDIO</a>
-                    <a href="#location" class="mobile-nav-link text-white hover:text-purple-400 transition-all duration-300 text-2xl font-bold tracking-wider">LOCATION</a>
-                    <a href="#about" class="mobile-nav-link text-white hover:text-lime-400 transition-all duration-300 text-2xl font-bold tracking-wider">ABOUT</a>
+                <nav class="flex flex-col items-center justify-center flex-1 space-y-4 px-2">
+                    <a href="#home" class="mobile-nav-link text-white hover:text-white-400 transition-all duration-300 text-xl font-bold tracking-wider">HOME</a>
+                    <a href="#gig" class="mobile-nav-link text-white hover:text-cyan-400 transition-all duration-300 text-xl font-bold tracking-wider">GIG / LIVE CONCERT</a>
+                    <a href="#studio" class="mobile-nav-link text-white hover:text-magenta-400 transition-all duration-300 text-xl font-bold tracking-wider">STUDIO</a>
+                    <a href="#location" class="mobile-nav-link text-white hover:text-purple-400 transition-all duration-300 text-xl font-bold tracking-wider">ON LOCATION</a>
+                    <a href="#about" class="mobile-nav-link text-white hover:text-lime-400 transition-all duration-300 text-xl font-bold tracking-wider">ABOUT</a>
                 </nav>
                 
                 <!-- Mobile Contact Info -->
-                <div class="text-center p-8 border-t border-cyan-500/30 bg-black/20">
+                <div class="text-center p-4 border-t border-cyan-500/30" style="background-color: #071028;">
                     <p class="text-cyan-400 mb-3 font-semibold text-lg">Get In Touch</p>
                     <p class="text-white mb-2 text-sm">lene@momentstomedia.com</p>
                     <p class="text-white text-sm">07885 414104</p>
@@ -66,7 +68,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="container mx-auto px-4 py-12 md:py-20">
+    <section id="home" class="container mx-auto px-4 py-12 md:py-20">
         <div class="hero-section flex flex-wrap items-center justify-between">
             <div class="hero-text w-full md:w-2/5 pr-0 md:pr-8 mb-8 md:mb-0">
                 <h2 class="neon-lime text-3xl md:text-5xl font-bold mb-4">CAPTURING THE ENERGY OF THE MOMENT</h2>
@@ -92,43 +94,419 @@
         <h2 class="neon-cyan text-3xl md:text-4xl font-bold mb-8 text-center">GIG / LIVE CONCERT PHOTOGRAPHY</h2>
         <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Gallery Items -->
-                         <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
-                            <img src="port/gig/Screenshot_20250704_133548_Instagram.jpg" 
-                      alt="Live violin performance with dramatic lighting" 
-                      class="w-full h-64 object-cover cursor-pointer"
-                      onclick="openModal(this)">
-             </div>
             <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
-                <img src="port/gig/Screenshot_20250704_135437_Instagram.jpg" 
+                <img src="gig/gig (1).jpg" 
+                    alt="Live violin performance with dramatic lighting" 
+                    class="w-full h-64 object-cover cursor-pointer"
+                    loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (2).jpg" 
                      alt="Live concert photo 2" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_25%]
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
-                <img src="port/gig/DSC00439.jpg" 
+                <img src="gig/gig (3).jpg"
+
                      alt="Live concert photo 3" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_20%]
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
-                <img src="port/gig/DSC08080-3.jpg" 
+                <img src="gig/gig (4).jpg" 
                      alt="Live concert photo 4" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_20%]
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
-                <img src="port/gig/DSC08065.jpg" 
+                <img src="gig/gig (5).jpg"
                      alt="Live concert photo 5" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_20%]
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
-                <img src="port/gig/0097cb66-1abe-4654-bbe4-423bccb17208.jpg" 
+                <img src="gig/gig (6).jpg"
                      alt="Live concert photo 6" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_82%]
+                     loading="lazy" onclick="openModal(this)">
             </div>
+             <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (7).jpg" 
+                     alt="Live concert photo 7" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (8).jpg" 
+                     alt="Live concert photo 8" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (9).jpg"
+                     alt="Live concert photo 9" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (10).jpg" 
+                     alt="Live concert photo 10" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+                        <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (11).jpg" 
+                    alt="Live concert photo 11" 
+                    class="w-full h-64 object-cover cursor-pointer"
+                    loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (12).jpg" 
+                     alt="Live concert photo 12" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (13).jpg"
+
+                     alt="Live concert photo 13" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (14).jpg" 
+                     alt="Live concert photo 14" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (15).jpg"
+                     alt="Live concert photo 15" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (16).jpg"
+                     alt="Live concert photo 16" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+             <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (17).jpg" 
+                     alt="Live concert photo 17" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (18).jpg" 
+                     alt="Live concert photo 18" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (19).jpg"
+                     alt="Live concert photo 19" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (20).jpg" 
+                     alt="Live concert photo 20" 
+                     class="w-full h-64 object-cover object-[center_30%]
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (21).jpg" 
+                    alt="Live concert photo 21" 
+                    class="w-full h-64 object-cover cursor-pointer"
+                    loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (22).jpg" 
+                     alt="Live concert photo 22" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (23).jpg"
+
+                     alt="Live concert photo 23" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (24).jpg" 
+                     alt="Live concert photo 24" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (25).jpg"
+                     alt="Live concert photo 25" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (26).jpg"
+                     alt="Live concert photo 26" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+             <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (27).jpg" 
+                     alt="Live concert photo 27" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (28).jpg" 
+                     alt="Live concert photo 28" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (29).jpg"
+                     alt="Live concert photo 29" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (30).jpg" 
+                     alt="Live concert photo 30" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (31).jpg" 
+                     alt="Live concert photo 31" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (32).jpg" 
+                     alt="Live concert photo 32" 
+                     class="w-full h-64 object-cover object-[center_15%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (33).jpg" 
+                     alt="Live concert photo 33" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (34).jpg" 
+                     alt="Live concert photo 34" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (35).jpg" 
+                     alt="Live concert photo 35" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (36).jpg" 
+                     alt="Live concert photo 36" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (37).jpg" 
+                     alt="Live concert photo 37" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (38).jpg" 
+                     alt="Live concert photo 38" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (39).jpg" 
+                     alt="Live concert photo 39" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (40).jpg" 
+                     alt="Live concert photo 40" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (41).jpg" 
+                     alt="Live concert photo 41" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (42).jpg" 
+                     alt="Live concert photo 42" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (43).jpg" 
+                     alt="Live concert photo 43" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (44).jpg" 
+                     alt="Live concert photo 44" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (45).jpg" 
+                     alt="Live concert photo 45" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (46).jpg" 
+                     alt="Live concert photo 46" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (47).jpg" 
+                     alt="Live concert photo 47" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (48).jpg" 
+                     alt="Live concert photo 48" 
+                     class="w-full h-64 object-cover object-[center_60%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (49).jpg" 
+                     alt="Live concert photo 49" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (50).jpg" 
+                     alt="Live concert photo 50" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (51).jpg" 
+                     alt="Live concert photo 51" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (52).jpg" 
+                     alt="Live concert photo 52" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (53).jpg" 
+                     alt="Live concert photo 53" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (54).jpg" 
+                     alt="Live concert photo 54" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (55).jpg" 
+                     alt="Live concert photo 55" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (56).jpg" 
+                     alt="Live concert photo 56" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (57).jpg" 
+                     alt="Live concert photo 57" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (58).jpg" 
+                     alt="Live concert photo 58" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (59).jpg" 
+                     alt="Live concert photo 59" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (60).jpg" 
+                     alt="Live concert photo 60" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (61).jpg" 
+                     alt="Live concert photo 61" 
+                     class="w-full h-64 object-cover object-[center_50%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (62).jpg" 
+                     alt="Live concert photo 62" 
+                     class="w-full h-64 object-cover object-[center_65%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (63).jpg" 
+                     alt="Live concert photo 63" 
+                     class="w-full h-64 object-cover object-[center_100%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (64).jpg" 
+                     alt="Live concert photo 64" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (65).jpg" 
+                     alt="Live concert photo 65" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (66).jpg" 
+                     alt="Live concert photo 66" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
+            <div class="gallery-item neon-border-cyan rounded-lg overflow-hidden">
+                <img src="gig/gig (67).jpg" 
+                     alt="Live concert photo 67" 
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>  
         </div>
+
+        <div class="pagination-controls text-center mt-8">
+            <button class="prev-arrow" onclick="prevGigPage()">←</button>
+            <button class="next-arrow" onclick="nextGigPage()">→</button>
+        </div>
+        <div id="gig-pagination" class="pagination pt-[10px] flex justify-center"></div>
+        
         <div class="text-center mt-12">
             <a href="mailto:lene@momentstomedia.com?subject=Photography Inquiry - Gig Photography&body=Hello Lene, I would like to inquire about your gig photography services..." class="email-btn btn-cyan inline-block px-8 py-3 rounded-full font-bold text-decoration-none">
                 To find out more or to book a shoot click here
@@ -149,43 +527,282 @@
         <h2 class="neon-magenta text-3xl md:text-4xl font-bold mb-8 text-center">STUDIO PHOTOGRAPHY</h2>
         <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Gallery Items -->
-                         <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
-                 <img src="port/gig/DSC04820.jpg" 
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                 <img src="studio/studio (1).jpg" 
                       alt="Dramatic black & white studio portrait" 
                       class="w-full h-64 object-cover cursor-pointer"
-                      onclick="openModal(this)">
+                      loading="lazy" onclick="openModal(this)">
              </div>
             <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
-                <img src="port/gig/DSC05205.jpg" 
+                <img src="studio/studio (2).jpg" 
                      alt="Studio photo 2" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_40%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
-                <img src="port/gig/DSC09761-2 2.jpg" 
+                <img src="studio/studio (3).jpg" 
                      alt="Studio photo 3" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_40%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
-                <img src="port/gig/DSC02894.JPG" 
+                <img src="studio/studio (4).jpg" 
                      alt="Studio photo 4" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_40%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
-                <img src="port/gig/DSC02026.jpg" 
+                <img src="studio/studio (5).jpg" 
                      alt="Studio photo 5" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
-                <img src="port/gig/DSC09449.JPG" 
+                <img src="studio/studio (6).jpg" 
                      alt="Studio photo 6" 
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (7).jpg" 
+                     alt="Studio photo 7" 
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (8).jpg" 
+                     alt="Studio photo 8" 
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (9).jpg" 
+                     alt="Studio photo 9" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (10).jpg" 
+                     alt="Studio photo 10" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (11).jpg" 
+                     alt="Studio photo 11" 
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (12).jpg" 
+                     alt="Studio photo 12" 
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (13).jpg" 
+                     alt="Studio photo 13" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (14).jpg" 
+                     alt="Studio photo 14" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (15).jpg" 
+                     alt="Studio photo 15" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (16).jpg" 
+                     alt="Studio photo 16" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (17).jpg" 
+                     alt="Studio photo 17" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (18).jpg" 
+                     alt="Studio photo 18" 
                      class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (19).jpg" 
+                     alt="Studio photo 19" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (20).jpg" 
+                     alt="Studio photo 20" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (21).jpg" 
+                     alt="Studio photo 21" 
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (22).jpg" 
+                     alt="Studio photo 22" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (23).jpg" 
+                     alt="Studio photo 23" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (24).jpg" 
+                     alt="Studio photo 24" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (25).jpg" 
+                     alt="Studio photo 25" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (26).jpg" 
+                     alt="Studio photo 26" 
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (27).jpg" 
+                     alt="Studio photo 27" 
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (28).jpg" 
+                     alt="Studio photo 28" 
+                     class="w-full h-64 object-cover object-[center_20%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (29).jpg" 
+                     alt="Studio photo 29" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (30).jpg" 
+                     alt="Studio photo 30" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (31).jpg" 
+                     alt="Studio photo 31" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (32).jpg" 
+                     alt="Studio photo 32" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (33).jpg" 
+                     alt="Studio photo 33" 
+                     class="w-full h-64 object-cover object-[center_40%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (34).jpg" 
+                     alt="Studio photo 34" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (35).jpg" 
+                     alt="Studio photo 35" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (36).jpg" 
+                     alt="Studio photo 36" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (37).jpg" 
+                     alt="Studio photo 37" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (38).jpg" 
+                     alt="Studio photo 38" 
+                     class="w-full h-64 object-cover object-[center_30%]
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (39).jpg" 
+                     alt="Studio photo 39" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (40).jpg" 
+                     alt="Studio photo 40" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (41).jpg" 
+                     alt="Studio photo 41" 
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (42).jpg" 
+                     alt="Studio photo 42" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (43).jpg" 
+                     alt="Studio photo 43" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (44).jpg" 
+                     alt="Studio photo 44" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item neon-border-magenta rounded-lg overflow-hidden">
+                <img src="studio/studio (45).jpg" 
+                     alt="Studio photo 45" 
+                     class="w-full h-64 object-cover cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
             </div>
         </div>
+        <div class="pagination-controls text-center mt-8">
+            <button class="prev-arrow" onclick="prevStudioPage()">←</button>
+            <button class="next-arrow" onclick="nextStudioPage()">→</button>
+        </div>
+        <div id="studio-pagination" class="pagination pt-[10px] flex justify-center"></div>
         <div class="text-center mt-12">
             <a href="mailto:lene@momentstomedia.com?subject=Photography Inquiry - Studio Photography&body=Hello Lene, I would like to inquire about your studio photography services..." class="email-btn btn-magenta inline-block px-8 py-3 rounded-full font-bold text-decoration-none">
                 To find out more or to book a shoot click here
@@ -207,40 +824,40 @@
         <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Gallery Items -->
             <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
-                <img src="port/gig/Screenshot_20250704_135152_Instagram.jpg" 
+                <img src="onlocation/onlocation (1).jpg" 
                      alt="Location photo 1" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_10%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
-                <img src="port/gig/Screenshot_20250706_004102_Instagram.jpg" 
+                <img src="onlocation/onlocation (2).jpg" 
                      alt="Location photo 2" 
                      class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
-                <img src="port/gig/Screenshot_20250706_003722_Instagram.jpg" 
+                <img src="onlocation/onlocation (3).jpg" 
                      alt="Location photo 3" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
-                <img src="port/gig/Screenshot_20250704_135258_Instagram.jpg" 
+                <img src="onlocation/onlocation (4).jpg" 
                      alt="Location photo 4" 
                      class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
-                <img src="port/gig/Screenshot_20250704_135324_Instagram.jpg" 
+                <img src="onlocation/onlocation (5).jpg" 
                      alt="Location photo 5" 
                      class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     loading="lazy" onclick="openModal(this)">
             </div>
             <div class="gallery-item neon-border-purple rounded-lg overflow-hidden">
-                <img src="port/gig/Screenshot_20250704_135115_Instagram.jpg" 
+                <img src="onlocation/onlocation (6).jpg" 
                      alt="Location photo 6" 
-                     class="w-full h-64 object-cover cursor-pointer"
-                     onclick="openModal(this)">
+                     class="w-full h-64 object-cover object-[center_30%] cursor-pointer"
+                     loading="lazy" onclick="openModal(this)">
             </div>
         </div>
         <div class="text-center mt-12">
@@ -354,6 +971,104 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
+
+    <script>
+    // Initialize variables
+    let gigImages = Array.from(document.querySelectorAll('#gig .gallery-item'));
+    let studioImages = Array.from(document.querySelectorAll('#studio .gallery-item'));
+    let currentGigPage = 0;
+    let currentStudioPage = 0;
+
+    const totalGigPages = Math.ceil(gigImages.length / 9);
+    const totalStudioPages = Math.ceil(studioImages.length / 9);
+
+    // Function to update the visible images based on the page
+    function updateImages(section, images, page) {
+        const startIdx = page * 9;
+        const endIdx = Math.min(startIdx + 9, images.length);
+
+        images.forEach((img, idx) => {
+            img.style.display = (idx >= startIdx && idx < endIdx) ? 'block' : 'none';
+        });
+    }
+
+    // Arrow navigation for Gig section
+    function prevGigPage() {
+        if (currentGigPage > 0) {
+            currentGigPage--;
+            updateImages('#gig', gigImages, currentGigPage);
+            updatePagination('#gig-pagination', currentGigPage, totalGigPages);
+        }
+    }
+
+    function nextGigPage() {
+        if (currentGigPage < totalGigPages - 1) {
+            currentGigPage++;
+            updateImages('#gig', gigImages, currentGigPage);
+            updatePagination('#gig-pagination', currentGigPage, totalGigPages);
+        }
+    }
+
+    // Arrow navigation for Studio section
+    function prevStudioPage() {
+        if (currentStudioPage > 0) {
+            currentStudioPage--;
+            updateImages('#studio', studioImages, currentStudioPage);
+            updatePagination('#studio-pagination', currentStudioPage, totalStudioPages);
+        }
+    }
+
+    function nextStudioPage() {
+        if (currentStudioPage < totalStudioPages - 1) {
+            currentStudioPage++;
+            updateImages('#studio', studioImages, currentStudioPage);
+            updatePagination('#studio-pagination', currentStudioPage, totalStudioPages);
+        }
+    }
+
+    // Update page number buttons
+    function updatePagination(paginationSelector, currentPage, totalPages) {
+        const pagination = document.querySelector(paginationSelector);
+        pagination.innerHTML = '';
+        for (let i = 0; i < totalPages; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.textContent = i + 1;
+            pageButton.classList.add('pagination-button');
+            if (i === currentPage) pageButton.classList.add('active');
+            pageButton.onclick = () => {
+                if (paginationSelector === '#gig-pagination') {
+                    currentGigPage = i;
+                    updateImages('#gig', gigImages, currentGigPage);
+                } else {
+                    currentStudioPage = i;
+                    updateImages('#studio', studioImages, currentStudioPage);
+                }
+                updatePagination(paginationSelector, i, totalPages);
+            };
+            pagination.appendChild(pageButton);
+        }
+    }
+
+    // On load, initialize the pages and images
+    window.onload = function() {
+        updateImages('#gig', gigImages, currentGigPage);
+        updateImages('#studio', studioImages, currentStudioPage);
+        updatePagination('#gig-pagination', currentGigPage, totalGigPages);
+        updatePagination('#studio-pagination', currentStudioPage, totalStudioPages);
+    }
+
+    // Modal functionality
+    function openModal(img) {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    }
+
+    function closeModal() {
+        document.getElementById('imageModal').style.display = "none";
+    }
+</script>
 
     <script src="script.js"></script>
 </body>

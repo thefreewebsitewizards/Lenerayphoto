@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lene Ray Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --navy: #071028;
+            --cyan: #00f0ff;
+            --magenta: #ff2bd6;
+            --purple: #9b5cff;
+            --lime: #9cff3b;
+            --off-white: #f0f0f0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--navy);
+            color: var(--off-white);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Neon Colors */
+        .neon-cyan {
+            color: var(--cyan);
+            text-shadow: 0 0 5px var(--cyan), 0 0 10px var(--cyan);
+        }
+
+        .neon-magenta {
+            color: var(--magenta);
+            text-shadow: 0 0 5px var(--magenta), 0 0 10px var(--magenta);
+        }
+
+        .neon-purple {
+            color: var(--purple);
+            text-shadow: 0 0 5px var(--purple), 0 0 10px var(--purple);
+        }
+
+        .neon-lime {
+            color: var(--lime);
+            text-shadow: 0 0 5px var(--lime), 0 0 10px var(--lime);
+        }
+
+        .btn-cyan {
+            background: linear-gradient(45deg, var(--navy), var(--cyan));
+            color: white;
+            border: 1px solid var(--cyan);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cyan:hover {
+            box-shadow: 0 0 15px 5px var(--cyan);
+            transform: translateY(-3px);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--cyan);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(7, 16, 40, 0.9);
+            z-index: 100;
+            padding-top: 60px;
+            color: var(--off-white);
+            text-align: center;
+        }
+
+        .mobile-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .mobile-menu li {
+            margin: 15px 0;
+        }
+
+        .mobile-menu a {
+            color: var(--off-white);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--cyan);
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: var(--off-white);
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px solid var(--cyan);
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-[#071028]/90 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-3xl font-bold neon-cyan">Lene Ray</a>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#home" class="nav-link text-white hover:text-[#00f0ff]">Home</a></li>
+                        <li><a href="#gig" class="nav-link text-white hover:text-[#00f0ff]">Gig/Live Concert</a></li>
+                        <li><a href="#studio" class="nav-link text-white hover:text-[#ff2bd6]">Studio</a></li>
+                        <li><a href="#location" class="nav-link text-white hover:text-[#9b5cff]">Location</a></li>
+                        <li><a href="#about" class="nav-link text-white hover:text-[#9cff3b]">About</a></li>
+                    </ul>
+                </nav>
+                <!-- Hamburger Button -->
+                <button class="md:hidden text-white" id="mobileMenuButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-close" id="mobileMenuClose">&times;</div>
+        <ul>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#gig" class="nav-link">Gig/Live Concert</a></li>
+            <li><a href="#studio" class="nav-link">Studio</a></li>
+            <li><a href="#location" class="nav-link">Location</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+        
+        <!-- Contact Info Section -->
+        <div class="contact-info">
+            <p class="text-white font-semibold">Get In Touch</p>
+            <p class="text-white">lene@momentstomedia.com</p>
+            <p class="text-white">07885 414104</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <!-- Your content here -->
+    </section>
+
+    <!-- Other sections of your page... -->
+
+    <script>
+        // Toggle mobile menu visibility
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.style.display = 'block';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (mobileMenu.style.display === 'block') {
+                    mobileMenu.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
